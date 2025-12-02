@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
@@ -168,12 +169,12 @@ export default function ComparisonPage() {
               <p className="text-gray-700 mb-6">
                 Use our converter to see the exact token savings for your data!
               </p>
-              <a
+              <Link
                 href="/"
                 className="inline-block bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
               >
                 Convert Your JSON Now
-              </a>
+              </Link>
             </section>
           </div>
         </article>

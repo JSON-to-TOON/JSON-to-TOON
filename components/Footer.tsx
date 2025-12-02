@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { Github, Twitter, Mail } from 'lucide-react'
 
 export function Footer() {
@@ -16,15 +17,15 @@ export function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">Pages</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="/" className="hover:text-white transition-colors">Converter</a></li>
-              <li><a href="/benefits" className="hover:text-white transition-colors">Benefits</a></li>
-              <li><a href="/blog" className="hover:text-white transition-colors">Blog</a></li>
+              <li><Link href="/" className="hover:text-white transition-colors">Converter</Link></li>
+              <li><Link href="/benefits" className="hover:text-white transition-colors">Benefits</Link></li>
+              <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="text-white font-semibold mb-4">Resources</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="/comparison" className="hover:text-white transition-colors">TOON vs JSON</a></li>
+              <li><Link href="/comparison" className="hover:text-white transition-colors">TOON vs JSON</Link></li>
             </ul>
           </div>
           <div>

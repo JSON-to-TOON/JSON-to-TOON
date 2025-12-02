@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { ArrowRight, Sparkles } from 'lucide-react'
 
 export function CTA() {
@@ -18,13 +19,13 @@ export function CTA() {
             <br />
             It's free, fast, and 100% private.
           </p>
-          <a
+          <Link
             href="/"
             className="inline-flex items-center gap-2 bg-white text-primary-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-50 transition-all hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl"
           >
             Start Converting Now
             <ArrowRight className="w-5 h-5" />
-          </a>
+          </Link>
           <p className="mt-6 text-sm text-primary-200">
             No signup required • No API keys • No limits
           </p>
