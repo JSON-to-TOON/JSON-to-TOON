@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Blog content styling - beautiful markdown-like formatting */
+.blog-content {
+  @apply text-gray-800;
+}
+
+.blog-content h2 {
+  @apply text-3xl font-bold text-gray-900 mt-10 mb-4 pb-2 border-b border-gray-200;
+}
+
+.blog-content h3 {
+  @apply text-2xl font-semibold text-gray-900 mt-8 mb-3;
+}
+
+.blog-content p {
+  @apply text-gray-700 leading-relaxed mb-4 text-lg;
+}
+
+.blog-content ul,
+.blog-content ol {
+  @apply mb-4 pl-6 space-y-2;
+}
+
+.blog-content ul {
+  @apply list-disc;
+}
+
+.blog-content ol {
+  @apply list-decimal;
+}
+
+.blog-content li {
+  @apply text-gray-700 leading-relaxed;
+}
+
+.blog-content code {
+  @apply bg-gray-100 px-1.5 py-0.5 rounded text-sm font-mono text-gray-800;
+}
+
+.blog-content pre {
+  @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-6;
+}
+
+.blog-content pre code {
+  @apply bg-transparent p-0 text-gray-100;
+}
+
+.blog-content strong {
+  @apply font-semibold text-gray-900;
+}
+
+.blog-content a {
+  @apply text-primary-600 hover:text-primary-700 underline;
+}
+
+.blog-content blockquote {
+  @apply border-l-4 border-primary-500 pl-4 italic text-gray-600 my-6;
+}
+
+.blog-content table {
+  @apply w-full border-collapse mb-6;
+}
+
+.blog-content th {
+  @apply bg-gray-100 p-3 text-left font-semibold border border-gray-300;
+}
+
+.blog-content td {
+  @apply p-3 border border-gray-300;
+}
+
+.blog-content hr {
+  @apply my-8 border-gray-200;
+}
+
+/* Custom animations - only if motion is not reduced */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s infinite;
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(255, 255, 255, 0.1) 50%,
+      transparent 100%
+    );
+    background-size: 1000px 100%;
+  }
+}
+
